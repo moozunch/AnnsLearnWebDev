@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Commons tags in HTML</title>
+    </head>
+    <body>
+        <!--Header h1 to h6-->
+        <h1>Header tag</h1>
+        <H4>case insensitives</H4>
+
+        <!--Paragraph tag-->
+        <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <!--will there's whitespaces in browser but that's fine, every browser have their own whitespace settings-->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus risus. Quam adipiscing vitae proin sagittis nisl rhoncus. Mauris augue neque gravida in fermentum et sollicitudin. Lectus proin nibh nisl condimentum id. Morbi non arcu risus quis varius quam. Mi quis hendrerit dolor magna eget est lorem. Ut diam quam nulla porttitor. Congue quisque egestas diam in arcu cursus euismod. Mus mauris vitae ultricies leo integer malesuada nunc vel risus. Facilisi morbi tempus iaculis urna id volutpat lacus. Porttitor rhoncus dolor purus non enim. Luctus accumsan tortor posuere ac ut. Nec feugiat nisl pretium fusce id velit ut tortor pretium. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Adipiscing diam donec adipiscing tristique risus nec feugiat in fermentum. Posuere morbi leo urna molestie at. Vitae proin sagittis nisl rhoncus. Platea dictumst vestibulum rhoncus est pellentesque. Nunc sed blandit libero volutpat.</p>
+
+        <!--Line break tag-->
+        <br> <!--Modern programmer didn't use break no more lol even netlix programmer using zero break-->
+
+        <!--Anchor tag(for links) with tail/attribute href as a references (usually links from outside the file(internet etc)-->
+        <a href="https://github.com/moozunch">Access to my Github</a>
+
+        <!--Div (Division/layout) like a cardboard boxes that has content inside, example to visualize cardboard: -->
+        <div style="width: 100px; height: 100px; background-color: steelblue"></div>
+        <div>
+            <p>hello!</p>
+        </div>
+
+        <!--Span - lil container that allow spesific changes with style css or java-->
+        <p>Hello, my name is <span style="color: crimson">Annisa</span></p>
+
+        <!--Ordered and Unordered List-->
+        <ol> <!--when order is Important-->
+            <li>chores</li>
+            <li>dishes</li>
+            <li>making bed</li>
+        </ol>
+        <ul>
+            <li>benar</li>
+            <li>salah</li>
+        </ul>
+
+        <!--Button ofc making a button-->
+        <button>Click me!</button> <!--nothing happen yet, need java script-->
+        <br>
+
+        <!--Image Button-->
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" width="80px" height="40px"> <!--source from the Internet--> <!--alt is like hint for image and can also help blind people to describe image thru alt while sounds on-->
+        <img src="/img/hi.png" alt = "hi!" style="width:80px; height:80px"> <!--source from the local file, harus pakai (/) to accessing the folder img-->
+
+        <!--Input-->
+        <input /> <!--also there's a lot of type that can be inputted-->
+        <input type="text" /> <br>
+        <input type="color" /> <br>
+        <input type="file" /> <br>
+        <input type="number" /> <br>
+        <input type="datetime-local"/> <br>
+        <input type="radio" /> <br> <!--if there's only one answear allowed-->
+        <input type="checkbox" /> <br> <!--and many more-->
+
+        <!--Text area like imput box for text but spesific much bigger-->
+        <textarea>Hi, my name is</textarea> <br>
+        <button>Submit</button>
+
+        <!--Select - Dropdown menu-->
+        <select>
+            <option>Benar</option>
+            <option>Salah</option>
+        </select> <br>
+
+        <!--Label, usually input, select are with label so client could know what input box and what we are expecting to input, text area could also using label-->
+        <label>
+            Name:
+            <input type="text" name="name">
+        </label>
+
+        <!--Form - combination of input in one grup-->
+        <form> <!--Grup of sign up-->
+            <!--Placeholder untuk hint-->
+            <input type="text" placeholder="Name" /> <br>
+            <input type="email" placeholder="Email" /> <br>
+            <input type="password" placeholder="Password" /> <br>
+            <button>Submit</button>
+        </form>
+        <br>
+
+
+        <!--Table, tr for row and td for cell-->
+        <table style="border: 1px solid #222222;"> <!--html 5 only outside border lol, if i want to make it inside aswell i also need to add style in each td or much easier with css-->
+            <thead>
+                <tr>
+                    <th style="border-right: 1px solid #222222">Time</th>
+                    <th>Activity</th>
+                </tr>
+            <tbody>
+                <!--data with tr will vertically align-->
+                <tr>
+                    <!--data with td will horizontally align-->
+                    <td style="border-right: 1px solid #222222">8.00</td>
+                    <td>breakfast</td>
+                </tr>
+                <tr>
+                    <td style="border-right: 1px solid #222222">9.00</td>
+                    <td>sport</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--Div could be use in everything!-->
+
+        <!--let's play something exciting-->
+        <marquee> <!--deprecated, but still could be used. lol even intellij didn't suggest it anymore-->
+            halo nama saya annisa
+        </marquee>
+
+        <!--Note on hard return-->
+        <p>ini paragraph kesatu
+
+        ini paragraph kedua</p> <!--html doesn't woek like this, any spaces more than 1 will be ignored and still count as 1 even enter, instead do this: -->
+        <p>ini paragraph kesatu</p>
+        <p>ini paragraph kedua</p>
+        <!--altho could also do it like this: -->
+        <p>ini paragraph kesatu <br>
+        ini paragraph kedua</p> <!--but also wrong, break have so many whitespaces and are not recommended! (the old way)-->
+
+        <!--JUST PRACTICEE TO NOT USING <BR> NO MORE!! websites never break and while html keep updating their version it's better if we already anticipating our website didn't break-->
+    </body>
+</html>
