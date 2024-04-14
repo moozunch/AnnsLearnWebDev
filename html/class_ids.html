@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Class and IDs in HTML</title>
+        <style>
+            .Make-It-Red {
+                color: red;
+            }
+            .Make-It-Blue {
+                color: blue;
+            }
+            .Make-It-Bolded {
+                font-weight: bold;
+            } </style>
+    </head>
+    <body>
+        <!--Class are one of identifier which will help a lot when we are working on CSS and Javascript, class name can't contain space but dashed (-) allowed!(underscore aswell!)-->
+        <h3 class="Make-It-Red">Hai!</h3>
+        <h3 class="Make-It-Blue">Hai again!</h3>
+        <!--see style tag above! so when using css when we want to only make change to specific h3(not all h3 tags)we could use class. All tags could have class-->
+        <!--Multiple class, a tag can have multiple class and separated with a space-->
+        <p class="Make-It-Red Make-It-Bolded">This is red and bolded</p> <!--see the reason they are using two classes? using classes to reduces using css attributes over and over again (DRY-don't repeat yourself)-->
+        <label>
+            input name/comment:
+            <input class="input-name input-comment" type="text"/>
+            <button>submit</button>
+        </label>
+
+
+        <!--IDs are also identifier but only for one element, so it's unique(one tag one id, other tag can't have the same id)-->
+        <h3 id="unique-id">This is unique</h3>
+        <!--
+        <p id="unique-id">This is not unique</p> this is wrong, id should be unique, if you want to use the same id, use class instead
+        -->
+
+        <!--way to make an image, when be clicked direct to another websites (also work with another tag if want to be clicked just add <a> tag-->
+        <a href="https://github.com/moozunch/AnnsLearnWebDev">
+            <img srcset="https://kinsta.com/wp-content/uploads/2021/03/HTML-5-Badge-Logo.png 1100w, https://kinsta.com/wp-content/uploads/2021/03/HTML-5-Badge-Logo-300x164.png 300w, https://kinsta.com/wp-content/uploads/2021/03/HTML-5-Badge-Logo-1024x559.png 1024w, https://kinsta.com/wp-content/uploads/2021/03/HTML-5-Badge-Logo-768x419.png 768w" alt="html5 icon">
+            <!--look thru web then inspect to get the image link-->
+
+        </a>
+    </body>
+</html>
