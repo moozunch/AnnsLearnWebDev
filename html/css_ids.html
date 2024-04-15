@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IDs and !important</title>
+    <style>
+        /*see this really speesific selector*/
+        #site-brand {
+            color: rebeccapurple;
+        }
+        h1#site-brand {
+            color: orangered;
+        }
+        h1#site-brand.nav-head {
+            color: crimson;
+        }
+        h1.nav-head.nav-main.other-useful-class {
+            color: green;
+        }
+        /*even tho they are more spesific but IDs will always win - ofc still id with spesific will also win better*/
+    </style>
+</head>
+<body>
+    <h1 id="site-brand" class="nav-head nav-main other-useful-class">
+        The Brand of my Website
+    </h1>
+</body>
+</html>

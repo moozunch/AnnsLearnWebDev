@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aturan Cascade CSS</title>
+    <!--Style 1-->
+    <style>
+        .title {
+            color: cadetblue;
+        }
+        h1 {
+            color: crimson;
+        }
+        /*class > h1 so class will win*/
+    </style>
+    <!--style 2-->
+    <style>
+        .title2 {
+            color: blueviolet;
+        }
+        .title2 {
+            color: brown;
+        }
+        /*betweeen class and class, the latest one will win*/
+    </style>
+    <!--style 3.1-->
+    <style>
+        .main-brand3 {
+            border: 4px dotted black;
+            color: black;
+        }
+        .title3 {
+            color: steelblue;
+        }
+        /*in css,every selector is equal so what goes latest will win but still only change the same one, the other properties will still applicable*/
+    </style>
+    <!--style 4-->
+    <style>
+        .main-brand4.title4 {
+            color: black;
+        }
+        .title4 {
+            color: steelblue;
+        }
+        /*in css what's class more spesific will win*/
+    </style>
+    <!--style 5-->
+    <style>
+        h1.main-brand5 {
+            color: red;
+        }
+
+        .main-brand5.title5 {
+            color: orange;
+        }
+
+        .main-brand5 {
+            color: green;
+        }
+        /*remember classes > tag and which one more spesific will win*/
+    </style>
+</head>
+<body>
+    <p style="font-weight: bolder">cascade or rule of priority in CSS</p>
+
+    <!--1-->
+    <h1 class="title">Cool title 1 </h1>
+    <!--2-->
+    <h1 class="title2">Cool title 2</h1>
+    <!--3-->
+    <h1 class="title3 main-brand3">Cool title 3</h1>
+    <!--4-->
+    <h1 class="title4 main-brand4">Cool title 4</h1>
+    <!--5-->
+    <h1 class="title5 main-brand5">Cool title 5</h1>
+
+    <!--Remember DRY (Don't Repeat Yourself) is applied aswell to css so make your code usefull -->
+    <!--and most developer end up an html file with a lot of css file and it absolutely fine just make sure it useful
+    or another way just write your css last so yk what you are doing-->
+    <!--also apllied with a bunch of file css, what's come last will win-->
+    <!--Just avoid cascading as you can, DRY!-->
+</body>
+</html>

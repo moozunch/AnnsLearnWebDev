@@ -37,7 +37,7 @@ html {
 /*
  * A better looking default horizontal rule
  */
-
+/*this is called as rule with hr as selector, mean all hr in the html has this setting/rule of property*/
 hr {
   display: block;
   height: 1px;

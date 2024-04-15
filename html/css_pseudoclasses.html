@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudoclasses in CSS</title>
+    <style>
+        .btn1 {
+            width: 100px;
+            height: 20px;
+            background-color: coral;
+            border-radius: 12px;
+        }
+        .btn1:hover {
+            width: 120px;
+            background-color: crimson;
+            /*sadly hover only worked on computer lol, mobile can't hover so avoid hover when working for mobile*/
+        }
+        .btn1:active {
+            background-color: white;
+            color: black;
+        }
+    </style>
+    <!--style 2-->
+    <style>
+        .satu {
+            /*affect to every tags with classes satu*/
+            color: crimson;
+            font-size: 30px;
+            border-bottom: 1px solid black;
+            padding-bottom: 3px;
+        }
+        .satu:first-child {
+            /*only first and last, spesific child: nth-child(4)*/
+            /*only applicable ke 1 anak pertama (Hi!! satu)*/
+            color: darkblue;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <!--Pseudoclasses: Make something conditionally could change - like animation example hover-->
+    <button class="btn1">click me</button>
+    <!--not just button, any tag can be conditionally-->
+    <!--style 2-->
+    <div>
+        <p class = "satu">Hi!! satu</p>
+        <p class = "satu">Hi!! dua</p>
+    </div>
+
+</body>
+</html>

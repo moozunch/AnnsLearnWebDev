@@ -1,0 +1,89 @@
+/* pakai control+/ untuk comment */
+
+/*note, what's in the div will change aswell if div changed*/
+/* 1. Universal selector (pakai * untuk perubahan keseluruhan isi file) */
+
+
+/*connect to halo.html*/
+* {
+    font-family: "Coolvetica Rg";
+    margin: 3px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Type selector (berdasar tag, seluruh nama tag sama akan kenak) */
+h1 {
+    color: darkolivegreen;
+    font-size: 60px; /*why sometimes font sometimes text, because property font messing up with font property*/
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: uppercase;
+    border: 3px solid darkolivegreen; /*size type color example: 3px dotted crimson*/
+    border-radius: 4px;
+}
+h2 {
+    color: crimson;
+}
+
+ul {
+    list-style-type: georgian; /*none, circle, square, decimal, lower-alpha, upper-alpha, lower-roman, upper-roman and many more*/
+    margin-left: 10px;
+}
+/* 3. Class selector, di html file tag yang kita targetin kasih attribute class*/
+/*remember class can be used over and over for multiple different tag*/
+li.satu {
+    color: darkblue;
+}
+li.dua {
+    color: darkgreen;
+}
+li.tiga {
+    color: firebrick;
+}
+li.empat {
+    color: darkslategray;
+}
+li.lima {
+    color: indigo;
+}
+.teks-tambahan {
+    color: red; /*use class like this is also allowed*/
+}
+.teks-tambahan{
+    color: darkorange; /*order mattered! the last one will change the color of previous one*/
+}
+
+/* 4. ID selector, di html file tag yang kita targetin kasih attribute id */
+/*remember id is only allowed to one tag and can't be used for another tag*/
+#tiga {
+    color: darkorange;
+    /* mirip class tapi gaperlu di deklarasiin juga tipe tagnya */
+}
+
+/* 5. Child selector (> anak dari)*/
+p > b {
+    /* p > b (b adalah anak dari p) */
+    color: darkred;
+}
+
+/* 6. Descendant selector (spasi) */
+/* setlah kita tambahi italic diluar bold nya tag p, kalau pakai child selector dia gabakal work karena bold didalam si italic, caranya pakai descendant selector */
+p b {
+    color: darkblue;
+}
+/* di CSS urutan juga matter ya, dia bakal pilih yang terakhir untuk latest changes */
+
+/* 7. Adjacent sibling selector (+) */
+/* ambil yang posisinya setelah sesuatu */
+p + h2 {
+    /* p + h2 artinya h2 setelah paragrapph */
+    color: deeppink;
+}
+
+/* 8. General sibling selector (~) */
+/* ambil yang posisinya setelah sesuatu */
+p ~ h2 {
+    /* p ~ h2 artinya cari h2 setelah paragrapph */
+    background-color: lightgray;
+}

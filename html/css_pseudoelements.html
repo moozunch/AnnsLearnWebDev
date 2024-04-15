@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo Elements in CSS</title>
+    <style>
+        .end-chapter p{
+            margin: 0;
+        }
+        .end-chapter::after {
+            content: " - The End";
+            font-style: italic;
+            color: gray;
+        }
+        /* also try this:
+        .end-chapter::after {
+        content: "❦";
+        font-size: 50px;
+        text-align: center;
+        display: block;
+        }
+        */
+    </style>
+</head>
+<body>
+    <!--evetyhing with 2 colons is pseudoelements, simple example: at the end of the books usually there is icon rignt? it's called fleurons -->
+    <div class="end-chapter">and they lived a happy life ever after</div>
+</body>
+</html>
