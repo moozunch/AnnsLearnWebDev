@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Layout in CSS</title>
+    <style>
+        .box-1 {
+            border: 1px solid black;
+            color: white;
+            align-content: center;
+            justify-content: center;
+            background-color: blue;
+            height: 150px;
+            width: 300px;
+        }
+        .box-2 {
+            border: 1px solid black;
+            color: white;
+            align-content: center;
+            justify-content: center;
+            background-color: red;
+            height: 100px;
+            width: 300px;
+        }
+        .box-3 {
+            border: 1px solid black;
+            color: white;
+            align-content: center;
+            justify-items: center;
+            background-color: green;
+            height: 200px;
+            width: 100px;
+        }
+    </style>
+    <!--satu-->
+    <style> /*layouting is actually on the parents which is class si div, mana ada layouting di object tersebut*/
+        .flex-container {
+            display: flex;
+            /*flex-direction:row-reverse; !*reverse content if you wish to, bisa juga column*!*/
+        }
+    </style>
+    <!--dua-->
+    <style>
+        .jc-right {
+            justify-content: flex-end; /*flex-end = right*/
+            flex-direction: row; /*column dia ngarah kebawah*/ /*ada juga value yang space, around dia kek padding, between dia margin */
+        }
+    </style>
+    <!--tiga-->
+    <style>
+        .al-fe {
+            align-items: flex-end; /*ingat align itu dia hubungan secara vertically jadi end = bottom*/
+        }
+    </style>
+    <!--empat-->
+    <style>
+        .no-height {
+            height: inherit; /*ignore dulu height masing masig box*/
+        }
+        .str-it {
+            align-items: stretch; /*stretch = penuhin space yang ada even tho they already have their own height*/
+            height: 200px;
+        }
+    </style>
+    <!--lima-->
+    <style>
+        .grow {
+
+        }
+        .grow .box-1 {
+            flex-grow: 1;
+            width: 0; /*kali 1, ignore the first height*/
+        }
+        .grow .box-2 {
+            flex-grow: 5;
+            width: 0; /*kali 2*/
+        }
+        .grow .box-3 {
+            flex-grow: 10;
+            width: 0; /*kali 10*/
+        }
+    </style>
+</head>
+<body>
+    <!--Flex layouting instead of autolayouting dia bakal compress/squeeze contents up dengan ukuran yang sama jadi masih bentuk yang sama-->
+    <!--satu-->
+    <h1>Flex Container</h1>
+    <div class="flex-container">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+    </div>
+    <!--dua - justify content-->
+    <h1>Justify content</h1>
+    <div class="flex-container jc-right">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+    </div>
+    <!--tiga - Align Items-->
+    <h1>Align Items</h1>
+    <div class="flex-container al-fe">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+    </div>
+    <!--empat - stretch-->
+    <h1>Stretch</h1> <!--paling bagus untuk layouting text to make them the same and many more-->
+    <div class="flex-container str-it">
+        <div class="box-1 no-height">1</div>
+        <div class="box-2 no-height">2</div>
+        <div class="box-3 no-height">3</div>
+    </div>
+    <!--lima - grow-->
+    <h1>Grow</h1> <!--numbuh nya dalam bentuk perkalian-->
+    <div class="flex-container grow">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+    </div>
+
+</body>
+</html>

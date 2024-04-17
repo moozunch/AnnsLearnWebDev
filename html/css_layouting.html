@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layouting in CSS</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 6px;
+            padding: 5px;
+            display: flex; /*In a flex container, the flex property allows an item to alter its dimensions to fill available space. */
+            align-items: center; /*center vertitally*/
+            justify-content: center; /*center horizontally*/
+            float: left; /*ke layouting ke samping*/
+            margin-right: 10px;
+            font-size: 30px;
+        }
+    </style>
+    <!--float-->
+    <style>
+        .box-1 {
+            border: 1px solid black;
+            color: white;
+            background-color: blue;
+            height: 150px;
+            width: 300px;
+        }
+        .box-2 {
+            border: 1px solid black;
+            color: white;
+            background-color: red;
+            height: 100px;
+            width: 300px;
+        }
+        .box-3 {
+            border: 1px solid black;
+            color: white;
+            background-color: green;
+            height: 200px;
+            width: 100px;
+        }
+        .floated div {
+            float: left; /*the idea of it is they will wrap up the space that are available for their height and widht it (agak memaksa)*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Box1</div> <!--even if we do floaat right the box1 will come first as the right one, sequence matter-->
+    <div class="box">Box2</div>
+    <!--Float : Old fashioned way of display but now not recommended since they weird-->
+    <!--tho still float help a lot when it comes to auto layouting-->
+    <!--but still it old already and not recommended-->
+    <div class="floated">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+    </div>
+
+</body>
+</html>

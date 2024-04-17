@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box-1 {
+            border: 1px solid black;
+            color: white;
+            align-content: center;
+            justify-content: center;
+            background-color: blue;
+            height: 150px;
+            width: 300px;
+        }
+        .box-2 {
+            border: 1px solid black;
+            color: white;
+            align-content: center;
+            justify-content: center;
+            background-color: red;
+            height: 100px;
+            width: 300px;
+        }
+        .box-3 {
+            border: 1px solid black;
+            color: white;
+            align-content: center;
+            justify-items: center;
+            background-color: green;
+            height: 200px;
+            width: 100px;
+        }
+    </style>
+    <style> /*layouting is actually on the parents which is class si div, mana ada layouting di object tersebut*/
+    .flex-container {
+        display: flex;
+        /*flex-direction:row-reverse; !*reverse content if you wish to, bisa juga column*!*/
+    }
+    </style>
+    <style>
+        .grow {
+
+        }
+        .grow .box-1 {
+            flex-grow: 1;
+            width: 0; /*kali 1*/
+        }
+        .grow .box-2 {
+            flex-grow: 5;
+            width: 0; /*kali 2*/
+        }
+        .grow .box-3 {
+            flex-grow: 10;
+            width: 0; /*kali 10*/
+        }
+    </style>
+</head>
+<body>
+<!--lima - grow-->
+<h1>Grow</h1> <!--numbuh nya dalam bentuk perkalian-->
+<div class="flex-container grow">
+    <div class="box-1">1</div>
+    <div class="box-2">2</div>
+    <div class="box-3">3</div>
+</div>
+</body>
+</html>
