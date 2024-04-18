@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid in CSS</title>
+    <!--Example 1-->
+    <style>
+        .grid {
+            /*notice do it in the div to make all content have this rule*/
+            display: grid; /*display grid*/
+            grid-template-columns: 1fr 1fr; /*1fr = 1 fraction, 1fr 1fr = 2 column*/
+            /*example: 1fr 2fr 1fr the first column would take 25%, the second 50%, the third 25%. The math works like flex-grow.*/
+            row-gap: 10px; /*jarak antar row*/
+            column-gap: 10px; /*jarak antar column*/
+        }
+        .Grid-picture {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <!--Ecample 2-->
+    <style>
+        .my-page-header {
+            grid-area : nav-header; /*pemberian namanya ada dibawah, di div nya, pakai grid-template-areas*/
+            background-color: red;
+            padding: 10px;
+        }
+
+        .my-page-body {
+            grid-area: main-body;
+            background-color: blue;
+            padding: 10px;
+        }
+
+        .my-page-sidebar {
+            grid-area: nav-side;
+            background-color: green;
+            padding: 10px;
+        }
+
+        .my-page-footer {
+            grid-area: footer;
+            background-color: yellow;
+            padding: 10px;
+        }
+
+        .my-page {
+            display: grid;
+            grid-template-areas: /*mirip  grid-template-columns tapi pakai penamaan, 3x means 75% side of site*/
+              "nav-header  nav-header  nav-header  nav-side"
+              "main-body   main-body   .           nav-side"
+              "footer      footer      footer      footer"; /*THE (.) will leave an empty space, look at the preview and see how this template slowly building the page grid*/
+        }
+    </style>
+</head>
+<body>
+    <!--Grid kinda like flex but more freely in term of laying out page compared to flex (lexibility and if have unique layout to achieve)-->
+    <!--Example 1-->
+    <div class="grid">
+        <img class="Grid-picture"
+             src="/img/meme1.jpg"
+             alt="Hi!!"/>
+        <img
+            class="Grid-picture"
+            src="/img/meme2.jpg"
+            alt="Hi!!"/>
+        <img
+            class="Grid-picture"
+            src="/img/meme3.jpg"
+            alt="Hi!!"/>
+        <img
+            class="Grid-picture"
+            src="/img/meme4.jpg"
+            alt="Hi!!"/>
+    </div>
+    <!--Example 2-->
+    <div class="my-page">
+        <header class="my-page-header">the header</header>
+        <div class="my-page-body">the body</div>
+        <div class="my-page-sidebar">the sidebar</div>
+        <footer class="my-page-footer">the footer</footer>
+    </div>
+</body>
+</html>
